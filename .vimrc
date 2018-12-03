@@ -7,6 +7,7 @@ set visualbell
 set encoding=utf-8
 set ttyfast
 
+set backspace=indent,eol,start
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
