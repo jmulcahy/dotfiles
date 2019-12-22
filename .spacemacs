@@ -42,18 +42,23 @@ values."
      git
      markdown
      org
+     lsp
      emacs-lisp
      clojure
      python
      rust
      python
-     julia
+     (julia :variables julia-mode-enable-lsp t)
+     (haskell :variables haskell-process-type 'stack-ghci
+              haskell-completion-backend 'intero
+              haskell-process-path-ghci "stack")
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      syntax-checking
      osx
+     ranger
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -305,6 +310,7 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-mode-line-theme 'spacemacs
    ))
 
 (defun dotspacemacs/user-init ()
